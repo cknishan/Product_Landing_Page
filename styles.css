@@ -1,0 +1,226 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Great+Vibes&family=Quicksand:wght@500&display=swap');
+
+*, html , body , ::before, ::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* height of sticky header */
+
+}
+
+a , li{
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+#video-section{color: white;}
+#video-section iframe{
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  }
+
+header{
+  width: 100vw;
+}
+
+/* css styles */
+
+#header{
+  width: 100vw;
+  overflow: hidden;
+}
+
+#nav-bar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+
+  z-index: 2;
+    backdrop-filter: blur(35px);
+
+}
+
+#header-img{
+  display: block;
+  width: 210px;
+  height: auto;
+  box-sizing: padding-box;
+  border: 2px solid rgba(0, 0, 0, 0.904);
+}
+
+#nav-bar ul{
+  display: flex;
+  align-items: center;
+}
+
+#showcase{
+  min-height: 90vh;
+  background: linear-gradient( rgba(44, 30, 30, 0.541),
+  rgba(32, 28, 28, 0.527)),
+  url("https://images.pexels.com/photos/1295572/pexels-photo-1295572.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-position: center;
+  background-size: cover;
+  /* border: 1rem solid rgba(37, 49, 158, 0.3); */
+  background-clip: border-box;
+  background-origin: border-box; 
+
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  
+  /* position: relative;
+  top: 80px; 
+  phone landscape */
+}
+
+#main-heading{
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem ;
+  text-align: center;
+}
+
+#sub-heading{
+  text-align: center;
+}
+
+
+li:hover, #header-img:hover{
+  transform: scale(1.2)
+}
+
+.section-title{
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+
+footer{
+  background: linear-gradient( rgba(44, 30, 30, 0.541),
+  rgba(32, 28, 28, 0.527)),
+  url("https://images.pexels.com/photos/1295572/pexels-photo-1295572.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-position: bottom;
+  background-size: cover;
+
+  background-attachment: fixed;
+
+  color: white;
+}
+
+/* nbt = not bootstrap class to prevent overwriting */
+
+.nbt-form-container{
+  max-width: 600px;
+  margin:0 auto;
+}
+
+.nbt-attention-btn{
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: .8rem 1.2rem;
+  border-radius: 50px;
+  margin: 0 5px 0 5px;
+}
+#call-to-action>a:nth-child(1){
+  background-color: rgb(30, 165, 37);
+}
+#call-to-action>a:nth-child(2){
+  background-color: rgb(30, 39, 165);
+}
+#call-to-action>a:nth-child(1):hover,
+#call-to-action>a:nth-child(2):hover{
+  color: #362218;
+  background-color: rgba(219, 217, 214, 0.911);
+}
+
+.note-attention{
+  line-height: 1.5; /* For mobile device where it goes to two lines */
+  border-bottom: red solid;
+  color:red ;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: .8rem 1.2rem 0;
+}
+
+
+
+/* utility classes --- overwriting the bootstrap*/
+
+.nav-link{
+  padding: 2px 5px;
+}
+
+dl, ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+#nav-bar li{
+  font-size: 1.5rem ;
+  padding: 0 .5rem;
+}
+
+
+/* media query */
+
+@media (max-width: 600px) {
+  #header-img{
+    width: 150px;
+  }
+
+  .nbt-attention-btn{
+    font-size: .8rem;
+    padding: .5rem .5rem;
+  }
+
+  #nav-bar{
+    flex-direction: column;
+  }
+
+  #nav-bar ul{
+    padding: .2rem 0rem;
+    justify-content: space-around;
+
+  }
+
+  #nav-bar li{
+    font-size: 1rem;
+    padding: .2rem 0rem;
+  }
+
+  #header-img{
+    margin: 0 auto ;
+  }
+}
+/* for landscape phone */
+@media (max-height: 400px) {
+  #main-heading{
+    text-transform: scale(.6);
+  }
+}
